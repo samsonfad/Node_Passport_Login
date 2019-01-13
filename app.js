@@ -20,6 +20,11 @@ mongoose.connect(db, {
 app.use(expressLayouts);
 app.set('view engine', 'ejs');
 
+// Bodyparser
+app.use(express.urlencoded({
+  extended: false
+}));
+
 
 //Routes
 app.use('/', require('./routes/index'));
